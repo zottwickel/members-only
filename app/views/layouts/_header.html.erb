@@ -3,9 +3,11 @@
 		<%= link_to "Members Only", root_path, id: "logo" %>
 		<nav>
 			<ul class="nav navbar-nav navbar-right">
-				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Users", users_path %></li>
+				<li><%= link_to "Feed", posts_path %></li>
 				<% if logged_in? %>
 					<li><%= link_to "Profile", current_user %></li>
+					<li><%= link_to "New Post", new_post_path %></li>
 					<li><%= link_to "Sign out", logout_path, method: :delete %></li>
 				<% else %>
 					<li><%= link_to "Sign up", signup_path %></li>

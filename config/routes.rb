@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
   
+  resources :posts, only: [:new, :create, :index, :show]
   resources :users
 end
